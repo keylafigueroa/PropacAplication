@@ -35,7 +35,6 @@
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	</TableRow>
 	
-   <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
 	   <ListView
 	       android:id="@+id/list"
 	       android:layout_width="match_parent"
@@ -45,6 +44,5 @@
 	       android:drawSelectorOnTop="false"
 	       tools:listitem="@layout/item_noticia" >
 	   </ListView>
-   </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
 	   
 </TableLayout>

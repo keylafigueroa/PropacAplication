@@ -2,63 +2,113 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
-	
-	<RelativeLayout android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:padding="@dimen/paddingRL" >
-	
-	    <TextView
-	        android:id="@+id/label_titulo"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:text="Large Text"
-	        android:textAppearance="?android:attr/textAppearanceLarge"
-	        android:gravity="center"
-	        android:textStyle="bold" />
-	
-	   <TextView
-	        android:id="@+id/label_fecha"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/label_titulo"
-	        android:layout_marginTop="16dp"
-	        android:text="fecha"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-	    <TextView
-	        android:id="@+id/label_autor"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignRight="@+id/label_fecha"
-	        android:layout_below="@+id/label_fecha"
-	        android:text="autor"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-	    <ImageView
-	        android:id="@+id/label_imgNoticia"
-	        android:layout_width="100dp"
-	        android:layout_height="100dp"
-	        android:layout_alignLeft="@+id/label_autor"
-	        android:layout_alignRight="@+id/label_titulo"
-	        android:layout_below="@+id/label_autor"
-	        android:layout_marginTop="16dp"
-	        android:adjustViewBounds="true"
-	        android:background="#808080"
-	        android:cropToPadding="true"
-	        android:scaleType="center" />
-	
-	    <TextView
-	        android:id="@+id/label_descripcion"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/label_imgNoticia"
-	        android:layout_alignRight="@+id/label_imgNoticia"
-	        android:layout_below="@+id/label_imgNoticia"
-	        android:layout_marginTop="28dp"
-	        android:singleLine="false"
-	        android:text="descripcion"
-	        android:textAppearance="?android:attr/textAppearanceMedium" />
-	
-	</RelativeLayout>
+
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content">
+
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="#cccccc" 
+	            android:padding="@dimen/paddingRL" >
+
+	            <TextView
+	                android:id="@+id/label_titulo"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:text="Titulo Noticia"
+	                android:shadowColor="#fff"
+			        android:shadowDx="1"
+			        android:shadowDy="1"
+	                android:textAppearance="?android:attr/textAppearanceLarge"
+	                android:textStyle="bold" />
+	        </TableRow>
+
+	        <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="#cccccc" 
+	            android:padding="@dimen/paddingRL"
+	            android:paddingTop="0px"
+	            android:paddingBottom="0px" >
+	            
+	            <TextView
+	                android:id="@+id/label_1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Publicado el"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            
+	            <TextView
+	                android:id="@+id/label_fecha"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="fecha"
+	                android:textColor="#666"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            
+	            <TextView
+	                android:id="@+id/label_2"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text=" por "
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	            
+	            <TextView
+	                android:id="@+id/label_autor"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="autor"
+	                android:textColor="#666"
+	                android:inputType="textCapWords"
+	                android:textStyle="italic"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+	        </TableRow>
+
+	        <TableRow
+	            android:id="@+id/tableRow3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="#cccccc" 
+	            android:padding="@dimen/paddingRL" >
+	        </TableRow>
+
+	        <TableRow
+	            android:id="@+id/tableRow4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/paddingRL" >
+
+	            <ImageView
+	                android:id="@+id/label_imgNoticia"
+	                android:layout_width="100dp"
+	                android:layout_height="100dp"
+	                android:layout_marginTop="16dp"
+	                android:adjustViewBounds="true"
+	                android:background="#808080"
+	                android:cropToPadding="true"
+	                android:scaleType="center" />
+	        </TableRow>
+	        
+	        <TableRow
+	            android:id="@+id/tableRow5"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/paddingRL" >
+
+			    <TextView
+			        android:id="@+id/label_descripcion"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="28dp"
+			        android:singleLine="false"
+			        android:typeface="serif"
+			        android:text="Descripcion"
+			        android:textAppearance="?android:attr/textAppearanceMedium" />
+	        </TableRow>
+	    </TableLayout>
 
 </ScrollView>

@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgNoticia"
-        android:text="comentarios"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:text="Comentarios"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
         
     <TextView
         android:id="@+id/like"
@@ -19,7 +19,7 @@
         android:layout_alignBaseline="@+id/comentarios"
         android:layout_marginLeft="160dp"
         android:text="like"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ImageView
         android:id="@+id/foto"
@@ -68,7 +68,7 @@
         android:layout_alignRight="@+id/imgNoticia"
         android:layout_marginRight="16dp"
         android:text="No like"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/autor"
@@ -77,7 +77,10 @@
         android:layout_alignBottom="@+id/foto"
         android:layout_marginBottom="14dp"
         android:layout_toRightOf="@+id/comentarios"
-        android:text="Medium Text"
+        android:text="Autor"
+        android:textColor="#666"
+	    android:inputType="textCapWords"
+	    android:textStyle="italic"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -87,7 +90,10 @@
         android:layout_alignLeft="@+id/autor"
         android:layout_alignTop="@+id/foto"
         android:textStyle="bold"
-        android:text="Large Text"
+        android:shadowColor="#fff"
+		android:shadowDx="1"
+		android:shadowDy="1"
+        android:text="Titulo"
         android:textAppearance="?android:attr/textAppearanceLarge" />
     
       <TextView

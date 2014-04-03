@@ -7,10 +7,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import uk.co.senab.actionbarpulltorefresh.library.ActionBarPullToRefresh;
+/*import uk.co.senab.actionbarpulltorefresh.library.ActionBarPullToRefresh;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout;
 import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
-
+*/
 import com.example.propac.R;
 
 import android.app.Activity;
@@ -32,13 +32,13 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class FragmentOne extends Fragment implements OnRefreshListener{
+public class FragmentOne extends Fragment{
 	 
 	ImageView ivIcon;
 	TextView tvItemName;
 	private ProgressDialog pDialog;
 	ListView lista;
-	private	PullToRefreshLayout mPullToRefreshLayout;
+	//private	PullToRefreshLayout mPullToRefreshLayout;
 
 
 	public static final String IMAGE_RESOURCE_ID = "iconResourceID";
@@ -73,12 +73,12 @@ public class FragmentOne extends Fragment implements OnRefreshListener{
 				getArguments().getInt(IMAGE_RESOURCE_ID)));
 		
 		
-		  mPullToRefreshLayout = new PullToRefreshLayout(container.getContext());
+	/*	  mPullToRefreshLayout = new PullToRefreshLayout(container.getContext());
 		  ActionBarPullToRefresh.from(getActivity())
 		    .insertLayoutInto(container)
 		    .listener(this)
 		    .allChildrenArePullable()
-		    .setup(mPullToRefreshLayout);   
+		    .setup(mPullToRefreshLayout);*/   
 		  
 		lista = (ListView) view.findViewById(R.id.list);
 
@@ -138,7 +138,7 @@ public class FragmentOne extends Fragment implements OnRefreshListener{
 	}
 	
 
-	@Override
+/*	@Override
 	public void onRefreshStarted(View view) {
 		new AsyncTask<Void, Void, Void>() {
 			@Override
@@ -209,7 +209,7 @@ public class FragmentOne extends Fragment implements OnRefreshListener{
 				/**
 				 * Updating parsed JSON data into ListView
 				 * */
-				ListAdapter adapter = new SimpleAdapter(
+/*				ListAdapter adapter = new SimpleAdapter(
 						getActivity(), noticiasList,
 						R.layout.item_noticia, new String[] { TAG_TITULO, TAG_AUTOR,
 								TAG_DESCRIPCION }, new int[] { R.id.titulo,
@@ -222,7 +222,7 @@ public class FragmentOne extends Fragment implements OnRefreshListener{
 	
 			
 		}.execute();
-	}
+	}*/
 	
 	/**
 	 * Async task class to get json by making HTTP call
