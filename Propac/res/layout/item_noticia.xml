@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/paddingRL"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <TextView
+ 		android:id="@+id/comentarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgNoticia"
+        android:text="comentarios"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/comentarios"
+        android:layout_marginLeft="160dp"
+        android:text="like"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="80dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="17dp"
+        android:adjustViewBounds="true"
+        android:background="#808080"
+        android:cropToPadding="true"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgNoticia"
+        android:layout_alignRight="@+id/titulo"
+        android:layout_below="@+id/foto"
+        android:layout_marginTop="19dp"
+        android:maxLines="3"
+        android:maxLength="150"
+        android:singleLine="false"
+        android:ellipsize="end"
+        android:text="descripcion"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imgNoticia"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/comentarios"
+        android:layout_alignRight="@+id/titulo"
+        android:layout_below="@+id/descripcion"
+        android:layout_marginTop="14dp"
+        android:adjustViewBounds="true"
+        android:background="#808080"
+        android:cropToPadding="true"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/noLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/comentarios"
+        android:layout_alignBottom="@+id/comentarios"
+        android:layout_alignRight="@+id/imgNoticia"
+        android:layout_marginRight="16dp"
+        android:text="No like"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/foto"
+        android:layout_marginBottom="14dp"
+        android:layout_toRightOf="@+id/comentarios"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/autor"
+        android:layout_alignTop="@+id/foto"
+        android:textStyle="bold"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+      <TextView
+        android:id="@+id/idNoticia"
+      	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/paddingRL"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

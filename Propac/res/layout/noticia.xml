@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+	
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:padding="@dimen/paddingRL" >
+	
+	    <TextView
+	        android:id="@+id/label_titulo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="Large Text"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:gravity="center"
+	        android:textStyle="bold" />
+	
+	   <TextView
+	        android:id="@+id/label_fecha"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/label_titulo"
+	        android:layout_marginTop="16dp"
+	        android:text="fecha"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <TextView
+	        android:id="@+id/label_autor"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignRight="@+id/label_fecha"
+	        android:layout_below="@+id/label_fecha"
+	        android:text="autor"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <ImageView
+	        android:id="@+id/label_imgNoticia"
+	        android:layout_width="100dp"
+	        android:layout_height="100dp"
+	        android:layout_alignLeft="@+id/label_autor"
+	        android:layout_alignRight="@+id/label_titulo"
+	        android:layout_below="@+id/label_autor"
+	        android:layout_marginTop="16dp"
+	        android:adjustViewBounds="true"
+	        android:background="#808080"
+	        android:cropToPadding="true"
+	        android:scaleType="center" />
+	
+	    <TextView
+	        android:id="@+id/label_descripcion"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/label_imgNoticia"
+	        android:layout_alignRight="@+id/label_imgNoticia"
+	        android:layout_below="@+id/label_imgNoticia"
+	        android:layout_marginTop="28dp"
+	        android:singleLine="false"
+	        android:text="descripcion"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	</RelativeLayout>
+
+</ScrollView>

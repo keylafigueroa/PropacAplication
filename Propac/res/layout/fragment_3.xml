@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/tableLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragmentTwo" >
+	<TableRow
+	    android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:padding="@dimen/paddingRL">
+        
+	    <ImageView
+	        android:id="@+id/frag3_icon"
+	        android:layout_width="wrap_content"
+	        android:paddingTop="15dp" />
+
+	    <TextView
+	        android:id="@+id/frag3_text"
+	        android:layout_width="wrap_content"
+	        android:text="@string/drawer_productos"
+  	        android:padding="@dimen/paddingRL"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	   <TextView
+	        android:id="@+id/url"
+	      	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="@dimen/paddingRL"
+	        android:text="@string/path"
+	        android:visibility="gone"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+	
+   <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
+	   <ListView
+	       android:id="@+id/list"
+	       android:layout_width="match_parent"
+	       android:layout_height="match_parent"
+	       android:layout_marginLeft="14dp"
+	       android:layout_marginRight="14dp"
+	       android:drawSelectorOnTop="false"
+	       tools:listitem="@layout/item_noticia" >
+	   </ListView>
+   </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
+	   
+</TableLayout>
